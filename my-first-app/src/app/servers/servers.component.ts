@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
     <app-server></app-server>
     <app-server></app-server>
   </div>`,
-  styleUrls: ['./servers.component.css']
+  styles: [`
+    h3 {
+      color: blue;
+    }
+  `]
 })
 export class ServersComponent implements OnInit {
 
