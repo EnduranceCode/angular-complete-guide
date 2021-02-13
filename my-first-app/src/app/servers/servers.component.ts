@@ -2,21 +2,19 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
-  template: `
-  <div class="jumbotron">
-    <h3>In the Servers Component</h3>
-    <app-server></app-server>
-    <app-server></app-server>
-  </div>`,
+  templateUrl: './servers.component.html',
   styles: [`
     h3 {
-      color: blue;
+      color: darkBlue;
     }
   `]
 })
 export class ServersComponent implements OnInit {
+  allowNewServer: boolean = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => { this.allowNewServer = true }, 3000);
+  }
 
   ngOnInit(): void {
   }
