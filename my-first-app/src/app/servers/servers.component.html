@@ -4,10 +4,21 @@
     </div>
 
     <div class="panel-body">
-        <app-server></app-server>
-        <app-server></app-server>
-    </div>
-    <div class="panel-footer">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputText" class="col-xs-2 control-label">Server Name:</label>
+                <div class="col-xs-10">
+                    <input type="email" class="form-control" id="inputText" (input)="onUpdateServerName($event)">
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">{{serverName}}</p>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <p class="text-center">{{ serverCreationStatus }}</p>
@@ -16,5 +27,14 @@
 
         <button class="btn btn-primary btn-lg btn-block" type="button" [disabled]="!allowNewServer"
             (click)="onCreateServer()">Add Server</button>
+    </div>
+
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-xs-12">
+                <app-server></app-server>
+                <app-server></app-server>
+            </div>
+        </div>
     </div>
 </div>
