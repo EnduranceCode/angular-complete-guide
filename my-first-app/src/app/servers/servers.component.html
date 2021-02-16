@@ -4,14 +4,16 @@
     </div>
 
     <div class="panel-body">
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="inputText" class="col-xs-2 control-label">Server Name:</label>
-                <div class="col-xs-10">
-                    <input type="email" class="form-control" id="inputText" (input)="onUpdateServerName($event)">
+        <div class="row vertical-space">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="inputText" class="col-xs-2 control-label">Server Name:</label>
+                    <div class="col-xs-10">
+                        <input type="email" class="form-control" id="inputText" [(ngModel)]="serverName">
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
 
         <div class="row">
             <div class="col-xs-12">
