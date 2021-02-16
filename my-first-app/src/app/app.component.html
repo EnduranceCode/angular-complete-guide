@@ -23,6 +23,43 @@
     </div>
   </div>
 
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>Databinding Assignment</h3>
+    </div>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="user-name" class="col-xs-2 control-label">User Name:</label>
+              <div class="col-xs-10">
+                <input class="form-control" type="text" [(ngModel)]="userName" (input)="onTextInput($event)"
+                  id="user-name">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-2 col-xs-10">
+          <p class="text-center">{{inputFeedback}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <button class="btn btn-primary btn-block" [disabled]="!buttonClickable" (click)="onClickButton()"
+            type="button">Add User</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-xs-12">
       <h2>In the AppComponent!</h2>
